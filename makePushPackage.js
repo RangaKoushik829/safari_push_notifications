@@ -8,10 +8,10 @@ const intermediate = fs.readFileSync('certificates/AppleWWDRCA.pem');
 const websiteJson = pushLib.websiteJSON(
   'SiteName', // Site Name
   'web.domain.notif', // Safari Push ID
-  ['https://yourdomain.com'], // Allowed Domains
+  ['https://yourdomain.com/'], // Allowed Domains
   'https://yourdomain.com/notification/%@', // Notification Click URL Pattern
   '19f8d7a6e9fb8a7f6d9330dabe957043', // Authentication Token
-  'https://yourdomain.com', // Push Server
+  'https://yourdomain.com/', // Push Server
 );
 pushLib.generatePackage(
   websiteJson,
